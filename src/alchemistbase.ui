@@ -1,0 +1,2544 @@
+<!DOCTYPE UI><UI version="3.2.1" stdsetdef="1">
+<class>AlchemistBase</class>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>AlchemistBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>861</width>
+            <height>776</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Alchemist</string>
+    </property>
+    <property name="icon">
+        <pixmap>image0</pixmap>
+    </property>
+    <hbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout11</cstring>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QGroupBox">
+                    <property name="name">
+                        <cstring>groupBox5</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>300</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                    <property name="maximumSize">
+                        <size>
+                            <width>300</width>
+                            <height>32767</height>
+                        </size>
+                    </property>
+                    <property name="title">
+                        <string>Sorting</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Sorting&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;The words in the Collection Table can be sorted alphabetically or reverse alphabetically (i.e. from the last letter to the first) and each order can be sorted forward or backward.&lt;/p&gt;
+
+ &lt;p&gt;When the word collection is sorted in reverse alphabetical order, all the words will be aligned at the right-most column.  This simplifies selecting word final morphemes.&lt;/p&gt;
+
+ &lt;p&gt;When sorted in alphabetical order, the words will be aligned at left-most column.&lt;/p&gt;</string>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QComboBox">
+                            <item>
+                                <property name="text">
+                                    <string>Alphabetical : Forward</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Alphabetical : Backward</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Reverse Alphabetical : Forward</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Reverse Alphabetical : Backward</string>
+                                </property>
+                            </item>
+                            <property name="name">
+                                <cstring>m_sortingComboBox</cstring>
+                            </property>
+                        </widget>
+                    </vbox>
+                </widget>
+                <widget class="QGroupBox">
+                    <property name="name">
+                        <cstring>groupBox4</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>300</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                    <property name="maximumSize">
+                        <size>
+                            <width>300</width>
+                            <height>32767</height>
+                        </size>
+                    </property>
+                    <property name="title">
+                        <string>Filters</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Filters&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;p&gt;Filters can be applied to show a subset of the word collection with matching features.&lt;/p&gt;
+
+ &lt;p&gt;The "Include" field accepts a single entry and all words that have the given string will be shown in the Collection Table.  The words will be aligned with the filter entry occupying the same columns for all words.  This makes it simple to select matching morphemes in multiple words.&lt;/p&gt;
+
+ &lt;p&gt;The "Exclude" field accepts multiple entries, separated by white space.  Any words containing one of these entries will not be included in the subset shown in the Collection Table.&lt;/p&gt;</string>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QComboBox">
+                            <item>
+                                <property name="text">
+                                    <string>All Words</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Analyzed Only</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Unanalyzed Only</string>
+                                </property>
+                            </item>
+                            <property name="name">
+                                <cstring>m_analyzedComboBox</cstring>
+                            </property>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout13</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>5</number>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel1</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Include:</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer8</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QLineEdit">
+                                    <property name="name">
+                                        <cstring>m_includeLineEdit</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>1</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>200</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursor>4</cursor>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>LineEditPanel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout14</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>5</number>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Exclude:</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer9</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QLineEdit">
+                                    <property name="name">
+                                        <cstring>m_excludeLineEdit</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>1</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>200</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursor>4</cursor>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout16</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>5</number>
+                                </property>
+                                <widget class="QPushButton">
+                                    <property name="name">
+                                        <cstring>m_showFilteredPushButton</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Show Filtered</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer10</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
+                        </widget>
+                    </vbox>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer6</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>16</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QGroupBox">
+                    <property name="name">
+                        <cstring>m_infoGroupBox</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>300</width>
+                            <height>400</height>
+                        </size>
+                    </property>
+                    <property name="maximumSize">
+                        <size>
+                            <width>300</width>
+                            <height>32767</height>
+                        </size>
+                    </property>
+                    <property name="title">
+                        <string>Word/Morpheme Information</string>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout8</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>m_scoreTextLabel</cstring>
+                                    </property>
+                                    <property name="enabled">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="text">
+                                        <string>Score:</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Morpheme Scoring&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Scoring is done on a per morpheme basis.  The scoring options are:
+
+ &lt;blockquote&gt;Not scored&lt;br&gt;
+
+ Certain&lt;br&gt;
+
+ Somewhat Certain&lt;br&gt;
+
+ Uncertain&lt;/blockquote&gt;&lt;br&gt;
+
+ The score for all words (and partitions) is defaulted to "Not scored."  Use the other score levels to mark the level of certainty that the morpheme is correct.&lt;/p&gt;
+
+ &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; Using this field will overwrite the score of every selected morpheme, even if only one letter of a morpheme is selected.&lt;/p&gt;</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer8_2</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
+                        </widget>
+                        <widget class="QComboBox">
+                            <item>
+                                <property name="text">
+                                    <string>Not scored</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Certain</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Somewhat certain</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Uncertain</string>
+                                </property>
+                            </item>
+                            <property name="name">
+                                <cstring>m_scoringComboBox</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Morpheme Scoring&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Scoring is done on a per morpheme basis.  The scoring options are:
+
+ &lt;blockquote&gt;Not scored&lt;br&gt;
+
+ Certain&lt;br&gt;
+
+ Somewhat Certain&lt;br&gt;
+
+ Uncertain&lt;/blockquote&gt;&lt;br&gt;
+
+ The score for all words (and partitions) is defaulted to "Not scored."  Use the other score levels to mark the level of certainty that the morpheme is correct.&lt;/p&gt;
+
+ &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; Using this field will overwrite the score of every selected morpheme, even if only one letter of a morpheme is selected.&lt;/p&gt;</string>
+                            </property>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout9</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>m_allomorphyTextLabel</cstring>
+                                    </property>
+                                    <property name="enabled">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="text">
+                                        <string>Allomorphy:</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Allomorphy&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Use the "Allomorphy" field to add information about the underlying form of a morpheme.&lt;/p&gt;
+
+ &lt;p&gt;Enter &lt;u&gt;only&lt;/u&gt; the underlying form of the allomorph if the surface form is not the underlying form.  For example, the word &lt;i&gt;imperfect&lt;/i&gt; can be broken into the morphemes &lt;i&gt;im&lt;/i&gt; and &lt;i&gt;perfect&lt;/i&gt;.  The prefix &lt;i&gt;im&lt;/i&gt; is an allomorph of &lt;i&gt;in&lt;/i&gt;, along with &lt;i&gt;il&lt;/i&gt;.  The correct input to the "Allomorphy" field when &lt;i&gt;im&lt;/i&gt; is selected in the Collection Table should be just "in" as opposed to "in,il,im" or anything else.  Also, the entry for a word containing the prefix &lt;i&gt;in&lt;/i&gt; should be left blank.&lt;/p&gt;
+
+ &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; Using this field will overwrite the allomorphy information of every selected morpheme, even if only one letter of a morpheme is selected.&lt;/p&gt;</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer9_2</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
+                        </widget>
+                        <widget class="QLineEdit">
+                            <property name="name">
+                                <cstring>m_allomorphyLineEdit</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="cursor">
+                                <cursor>4</cursor>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Allomorphy&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Use the "Allomorphy" field to add information about the underlying form of a morpheme.&lt;/p&gt;
+
+ &lt;p&gt;Enter &lt;u&gt;only&lt;/u&gt; the underlying form of the allomorph if the surface form is not the underlying form.  For example, the word &lt;i&gt;imperfect&lt;/i&gt; can be broken into the morphemes &lt;i&gt;im&lt;/i&gt; and &lt;i&gt;perfect&lt;/i&gt;.  The prefix &lt;i&gt;im&lt;/i&gt; is an allomorph of &lt;i&gt;in&lt;/i&gt;, along with &lt;i&gt;il&lt;/i&gt;.  The correct input to the "Allomorphy" field when &lt;i&gt;im&lt;/i&gt; is selected in the Collection Table should be just "in" as opposed to "in,il,im" or anything else.  Also, the entry for a word containing the prefix &lt;i&gt;in&lt;/i&gt; should be left blank.&lt;/p&gt;
+
+ &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; Using this field will overwrite the allomorphy information of every selected morpheme, even if only one letter of a morpheme is selected.&lt;/p&gt;</string>
+                            </property>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout10</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>m_remarksTextLabel</cstring>
+                                    </property>
+                                    <property name="enabled">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="text">
+                                        <string>Notes/Remarks:</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Morpheme Notes/Remarks&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Use the "Morpheme Notes/Remarks" text edit field to add any notes for yourself or other users of the Gold Standard you create.&lt;/p
+
+ &lt;p&gt;There are no length restrictions on the notes/remarks that you keep here.  The notes/remarks are per morpheme, as opposed to per word, but can be applied to an entire word by selecting all morphemes of the word before writing the notes.&lt;/p&gt;
+
+ &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; Using this field will overwrite the notes/remarks of every selected morpheme, even if only one letter of a morpheme is selected.&lt;/p&gt;</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer10_2</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
+                        </widget>
+                        <widget class="QTextEdit">
+                            <property name="name">
+                                <cstring>m_remarksTextEdit</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="cursor">
+                                <cursor>4</cursor>
+                            </property>
+                            <property name="tabChangesFocus">
+                                <bool>true</bool>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Morpheme Notes/Remarks&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Use the "Morpheme Notes/Remarks" text edit field to add any notes for yourself or other users of the Gold Standard you create.&lt;/p
+
+ &lt;p&gt;There are no length restrictions on the notes/remarks that you keep here.  The notes/remarks are per morpheme, as opposed to per word, but can be applied to an entire word by selecting all morphemes of the word before writing the notes.&lt;/p&gt;
+
+ &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; Using this field will overwrite the notes/remarks of every selected morpheme, even if only one letter of a morpheme is selected.&lt;/p&gt;</string>
+                            </property>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout6</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QPushButton">
+                                    <property name="name">
+                                        <cstring>m_commitInfoButton</cstring>
+                                    </property>
+                                    <property name="enabled">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="text">
+                                        <string>Commit</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Commit&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Commit changes to Allomorphy or Notes/Remarks fields.&lt;/p
+
+ &lt;p&gt;Attaches any changes made to the Allomorphy or Notes/Remarks fields to the selected word(s) or morpheme(s).&lt;/p&gt;</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer6_2</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
+                        </widget>
+                    </vbox>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>groupBox6_2</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>450</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="title">
+                <string>Collection</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QTable">
+                    <column>
+                        <property name="text">
+                            <string>0</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>1</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>2</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>3</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>4</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>5</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>6</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>7</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>8</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>9</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>10</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>11</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>12</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>13</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>14</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>15</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>16</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>17</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>18</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>19</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>20</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>21</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>22</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>23</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>24</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>25</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>26</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>27</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>28</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>29</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>30</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>31</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>32</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>33</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>34</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>35</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>36</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>37</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>38</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>39</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>40</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>41</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>42</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>43</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>44</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>45</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>46</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>47</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>48</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>49</string>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>50</string>
+                        </property>
+                    </column>
+                    <row>
+                        <property name="text">
+                            <string>0</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>1</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>2</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>3</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>4</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>5</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>6</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>7</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>8</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>9</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>10</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>11</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>12</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>13</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>14</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>15</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>16</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>17</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>18</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>19</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>20</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>21</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>22</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>23</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>24</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>25</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>26</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>27</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>28</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>29</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>30</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>31</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>32</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>33</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>34</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>35</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>36</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>37</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>38</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>39</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>40</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>41</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>42</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>43</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>44</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>45</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>46</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>47</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>48</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>49</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>50</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>51</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>52</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>53</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>54</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>55</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>56</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>57</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>58</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>59</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>60</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>61</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>62</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>63</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>64</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>65</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>66</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>67</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>68</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>69</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>70</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>71</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>72</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>73</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>74</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>75</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>76</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>77</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>78</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>79</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>80</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>81</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>82</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>83</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>84</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>85</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>86</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>87</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>88</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>89</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>90</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>91</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>92</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>93</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>94</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>95</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>96</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>97</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>98</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>99</string>
+                        </property>
+                    </row>
+                    <row>
+                        <property name="text">
+                            <string>100</string>
+                        </property>
+                    </row>
+                    <property name="name">
+                        <cstring>m_tableDisplay</cstring>
+                    </property>
+                    <property name="numRows">
+                        <number>101</number>
+                    </property>
+                    <property name="numCols">
+                        <number>51</number>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Collection Table&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;All the words in the collection will be visible here after opening a document and when not using filters.  If filters have been applied, only a filtered subset of the collection will be visible.&lt;/p&gt;
+
+ &lt;p&gt;Words or parts of words can be selected by clicking on a cell and dragging the selection area to encompass other areas.  Entire rows or columns can also be selected by clicking on the row or column number at the left and top of the table.&lt;/p&gt;
+
+ &lt;p&gt;Right clicking on a selected area brings up a context menu of commands that can be applied to the area.&lt;/p&gt;</string>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout10</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>m_updateTableButton</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Refresh Table</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Edit : Refresh&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Refresh the table data.&lt;/p&gt;
+
+ &lt;p&gt;Refreshes all cells of the Collection Table.  Due to performance issues, deletions and other changes may be executed without updating the table.  Refreshing the table shows all the changes that have been done since the last refresh or sort.&lt;/p&gt;</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer5</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>37</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>m_previousPageButton</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="text">
+                                <string>Previous Page</string>
+                            </property>
+                        </widget>
+                        <widget class="QComboBox">
+                            <property name="name">
+                                <cstring>m_pageComboBox</cstring>
+                            </property>
+                        </widget>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>m_nextPageButton</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="text">
+                                <string>Next Page</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </vbox>
+        </widget>
+    </hbox>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>menubar</cstring>
+    </property>
+    <item text="&amp;File" name="fileMenu">
+        <action name="fileNewAction"/>
+        <action name="fileOpenAction"/>
+        <action name="fileSaveAction"/>
+        <action name="fileSaveAsAction"/>
+        <action name="fileCloseAction"/>
+        <separator/>
+        <action name="filePreferencesAction"/>
+        <separator/>
+        <action name="fileExitAction"/>
+    </item>
+    <item text="&amp;Edit" name="editMenu">
+        <action name="editUndoAction"/>
+        <action name="editRedoAction"/>
+        <separator/>
+        <action name="editRefreshAction"/>
+        <action name="editDeleteAction"/>
+        <separator/>
+        <action name="editChangeFontAction"/>
+        <action name="m_leftToRight"/>
+        <separator/>
+        <action name="editDocInfoAction"/>
+    </item>
+    <item text="&amp;Morphology" name="Morphology">
+        <action name="newStemRootAction"/>
+        <action name="newAffixAction"/>
+        <action name="clearCutsAction"/>
+        <separator/>
+        <action name="duplicateWordAction"/>
+    </item>
+    <item text="&amp;Help" name="helpMenu">
+        <action name="helpWhatsThisAction"/>
+        <action name="helpAboutAction"/>
+    </item>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>m_FileToolbar</cstring>
+        </property>
+        <property name="label">
+            <string>File Tool Bar</string>
+        </property>
+        <action name="fileNewAction"/>
+        <action name="fileOpenAction"/>
+        <action name="fileSaveAction"/>
+    </toolbar>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>m_HelpToolbar</cstring>
+        </property>
+        <property name="label">
+            <string>Help Tool Bar</string>
+        </property>
+        <action name="helpWhatsThisAction"/>
+    </toolbar>
+    <toolbar dock="4">
+        <property name="name">
+            <cstring>m_EditToolbar</cstring>
+        </property>
+        <property name="label">
+            <string>Edit Tool Bar</string>
+        </property>
+        <action name="editUndoAction"/>
+        <action name="editRedoAction"/>
+        <separator/>
+        <action name="newStemRootAction"/>
+        <action name="newAffixAction"/>
+        <action name="clearCutsAction"/>
+    </toolbar>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>fileOpenAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image1</iconset>
+        </property>
+        <property name="text">
+            <string>Open</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Open...</string>
+        </property>
+        <property name="statusTip">
+            <string>Open a file.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;File : Open&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Open a file.&lt;/p&gt;
+
+ &lt;p&gt;Opens a file and reads a predefined number of distinct words into the collection for analysis.&lt;/p&gt;
+
+ &lt;p&gt;The file type may be either a text file or an XML (*.xml) file created by Alchemist.&lt;/p&gt;
+
+ &lt;p&gt;If the chosen file is a text file, the program will continue to add words to the collection until the desired number of distinct words have been added.&lt;/p&gt;  
+
+ &lt;p&gt;If the file is an XML file, the program will add all the words from the file.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+O</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image2</iconset>
+        </property>
+        <property name="text">
+            <string>Save</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Save</string>
+        </property>
+        <property name="statusTip">
+            <string>Save the collection.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;File : Save&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Save the collection.&lt;/p&gt;
+
+ &lt;p&gt;Saves all words from the collection to a pre-chosen XML (*.xml) file.  The XML file can be reopened and edited in Alchemist.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+S</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileSaveAsAction</cstring>
+        </property>
+        <property name="text">
+            <string>Save As</string>
+        </property>
+        <property name="menuText">
+            <string>Save &amp;As...</string>
+        </property>
+        <property name="statusTip">
+            <string>Save the collection to a new file.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;File : Save&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Save the collection to a new file.&lt;/p&gt;
+
+ &lt;p&gt;Saves all words from the collection to a new XML (*.xml) file.  The XML file can be reopened and edited in Alchemist.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileExitAction</cstring>
+        </property>
+        <property name="text">
+            <string>Exit</string>
+        </property>
+        <property name="menuText">
+            <string>E&amp;xit</string>
+        </property>
+        <property name="statusTip">
+            <string>Quit Alchemist.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;File : Exit&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Quit Alchemist.&lt;/p&gt;
+
+ &lt;p&gt;Exits the program.  All changes will be lost if they are not saved before exiting.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>editUndoAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image3</iconset>
+        </property>
+        <property name="text">
+            <string>Undo</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Undo</string>
+        </property>
+        <property name="statusTip">
+            <string>Undo the last change.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Edit : Undo&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Undo the last change.&lt;/p&gt;
+
+ &lt;p&gt;Undoes the last change to the collection or any of the words.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+Z</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>editRedoAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image4</iconset>
+        </property>
+        <property name="text">
+            <string>Redo</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Redo</string>
+        </property>
+        <property name="statusTip">
+            <string>Redo the last undo.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Edit : Redo&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Redo the last undo.&lt;/p&gt;
+
+ &lt;p&gt;Redoes the last change to be undone.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+Y</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpAboutAction</cstring>
+        </property>
+        <property name="text">
+            <string>About</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;About</string>
+        </property>
+        <property name="statusTip">
+            <string>Get more information about Alchemist.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Help : About&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Get more information about Alchemist.&lt;/p&gt;
+
+ &lt;p&gt;Opens a dialog with information on how to find more information about Alchemist and its creators.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>editDeleteAction</cstring>
+        </property>
+        <property name="text">
+            <string>Delete</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Delete</string>
+        </property>
+        <property name="toolTip">
+            <string>Delete</string>
+        </property>
+        <property name="statusTip">
+            <string>Delete data from selected cells.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Edit : Delete&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Delete data from selected cells.&lt;/p&gt;
+
+ &lt;p&gt;Deletes the data from all selected cells in the Collection Table.  If all cells of a word are selected, the word will be deleted from the collection.  Otherwise, only the part of the word that is selected will be removed.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Del</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>editBackspaceAction</cstring>
+        </property>
+        <property name="text">
+            <string>Delete</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Delete</string>
+        </property>
+        <property name="accel">
+            <string>Backspace</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>newStemRootAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image5</iconset>
+        </property>
+        <property name="text">
+            <string>New Root</string>
+        </property>
+        <property name="menuText">
+            <string>New &amp;Root</string>
+        </property>
+        <property name="statusTip">
+            <string>Set selected cells to type "root."</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Morphology : New Root&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Set selected cells to type "root."&lt;/p&gt;
+
+ &lt;p&gt;Makes a new type "root" morpheme in all words with a selected piece.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+R</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>newAffixAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image6</iconset>
+        </property>
+        <property name="text">
+            <string>New Affix</string>
+        </property>
+        <property name="menuText">
+            <string>New &amp;Affix</string>
+        </property>
+        <property name="statusTip">
+            <string>Set selected cells to type "affix."</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Morphology : New Affix&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Set selected cells to type "affix."&lt;/p&gt;
+
+ &lt;p&gt;Makes a new type "affix" morpheme in all words with a selected piece.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+A</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>filePreferencesAction</cstring>
+        </property>
+        <property name="text">
+            <string>Preferences</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Preferences</string>
+        </property>
+        <property name="toolTip">
+            <string>Open a dialog for viewing and changing preferences.</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>editRefreshAction</cstring>
+        </property>
+        <property name="text">
+            <string>Refresh</string>
+        </property>
+        <property name="menuText">
+            <string>R&amp;efresh</string>
+        </property>
+        <property name="toolTip">
+            <string>Refresh</string>
+        </property>
+        <property name="statusTip">
+            <string>Refresh the table data.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Edit : Refresh&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Refresh the table data.&lt;/p&gt;
+
+ &lt;p&gt;Refreshes all cells of the Collection Table.  Due to performance issues, deletions and other changes may be executed without updating the table.  Refreshing the table shows all the changes that have been done since the last refresh or sort.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>F5</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>editChangeFontAction</cstring>
+        </property>
+        <property name="text">
+            <string>Font...</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Font...</string>
+        </property>
+        <property name="toolTip">
+            <string>Font...</string>
+        </property>
+        <property name="statusTip">
+            <string>Changes the font used in the Collection Table.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Edit : Font...&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Changes the font used in the Collection Table.&lt;/p&gt;
+
+ &lt;p&gt;Opens a dialog for choosing font family and size.  The selected font will be used for all items in the Collection Table.&lt;/p&gt;
+
+ &lt;p&gt;Note: The chosen font style will not used because different morphemes types use font style.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+F</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpWhatsThisAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image7</iconset>
+        </property>
+        <property name="text">
+            <string>What's This?</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;What's This?</string>
+        </property>
+        <property name="toolTip">
+            <string>What's This?</string>
+        </property>
+        <property name="statusTip">
+            <string>Find out information about Alchemist tools.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Help : What's This?&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Find out information about Alchemist tools.&lt;/p&gt;
+
+ &lt;p&gt;If you're reading this, you know what this tool does...  this is what it does.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Shift+F1</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileOpen_XmlAction</cstring>
+        </property>
+        <property name="text">
+            <string>Open Xml...</string>
+        </property>
+        <property name="menuText">
+            <string>Open Xml...</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>clearCutsAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image8</iconset>
+        </property>
+        <property name="text">
+            <string>Clear Cuts </string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Clear Cuts </string>
+        </property>
+        <property name="statusTip">
+            <string>Clear the cuts in the selected cells.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Morphology : Clear Cuts&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;p&gt;Clear the cuts in the selected cells.&lt;/p&gt;
+
+ &lt;p&gt;Clears all existing cuts in all words or word pieces that are inside the selection.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+C</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileNewAction</cstring>
+        </property>
+        <property name="iconSet">
+            <iconset>image9</iconset>
+        </property>
+        <property name="text">
+            <string>New...</string>
+        </property>
+        <property name="menuText">
+            <string>New...</string>
+        </property>
+        <property name="statusTip">
+            <string>Open a new text file for editing.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;File : New&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Open a new text file for editing.&lt;/p&gt;
+
+ &lt;p&gt;Opens a file and reads a predefined number of distinct words into the collection for analysis.&lt;/p&gt;
+
+ &lt;p&gt;The program will continue to add words to the collection until the desired number of distinct words have been added.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+N</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>commitInfoAction</cstring>
+        </property>
+        <property name="text">
+            <string>Commit Info </string>
+        </property>
+        <property name="menuText">
+            <string>Commit Info </string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>fileCloseAction</cstring>
+        </property>
+        <property name="text">
+            <string>Close</string>
+        </property>
+        <property name="menuText">
+            <string>Close</string>
+        </property>
+        <property name="statusTip">
+            <string>Close the currently open document.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;File : Close&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Close the currently open document.&lt;/p&gt;
+
+ &lt;p&gt;Closes the working document without exiting the program.&lt;/p&gt;</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>editDocInfoAction</cstring>
+        </property>
+        <property name="text">
+            <string>Document Information</string>
+        </property>
+        <property name="menuText">
+            <string>Document Information</string>
+        </property>
+        <property name="statusTip">
+            <string>Edit document information.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Edit : Document Information&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Edit document information.&lt;/p
+
+ &lt;p&gt;Opens a dialog where the creator name, affiliation, corpus language and general remarks can be edited.&lt;/p&gt;</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>duplicateWordAction</cstring>
+        </property>
+        <property name="text">
+            <string>Duplicate Word</string>
+        </property>
+        <property name="menuText">
+            <string>Duplicate Word</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+D</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>filterSelectedAction</cstring>
+        </property>
+        <property name="text">
+            <string>Filter Selected</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Filter Selected</string>
+        </property>
+        <property name="statusTip">
+            <string>Filter for selected string.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Filter Selected&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Filter for selected string.&lt;/p&gt;
+
+ &lt;p&gt;Filters for all words that contain the selected string.&lt;/p&gt;</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+F</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>m_leftToRight</cstring>
+        </property>
+        <property name="toggleAction">
+            <bool>true</bool>
+        </property>
+        <property name="on">
+            <bool>true</bool>
+        </property>
+        <property name="text">
+            <string>Left to right</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;Left to right</string>
+        </property>
+        <property name="statusTip">
+            <string>Toggle the text directionality.</string>
+        </property>
+        <property name="whatsThis">
+            <string>&lt;font color="#555500" size="+1"&gt;&lt;b&gt;&lt;tt&gt;Edit : Left to right&lt;/tt&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;
+
+ &lt;p&gt;Toggle the text directionality.&lt;/p&gt;
+
+ &lt;p&gt;Toggles the directionality of the text.  Text in the words (0) column will automatically be written with the correct directionality.  This affects the directionality of the individual characters in the other columns (1 through n).&lt;/p&gt;</string>
+        </property>
+    </action>
+</actions>
+<images>
+    <image name="image0">
+        <data format="PNG" length="1188">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af40000046b49444154789ced97cd6f147518c73fbfd999dd9dd9ee6e5b4a5b4b9177114d0c1aa341036c018312bd78c003078344c23fa0376f4df4e8416f120d0921ea8944dad2966e78318201e462941749792bb6b00bdbddd9999d999dc743ed96d296b640c403dfe3ccf37bbe9f799e99dfef1925223c49694fd4fd29c05380ff03803ed7c013c77f941b37aef1ece206d6bdb9533d2e0035db3ed0d3f59d384e11db31b0ed104585649d86957048d7bf4a26b3e591606604e83ab45f1cc7c671c1b63d0c43231a8d030110c1b66d6286cb82c6dba4ea37b031f3ee43814c0138b0ff2b1171713d0bdf0f300c9d6814e27113d7f501453c9e6074f42ea99409b8e8e44825afa2c737b361e307f3029904d0d9d929cd0b43ac4413b6ed60db3eb1580cd38c0110f8050cc3c00f742c2b81e785a45221a669525f77154bdf8b1fbe4225dccafa8d7be6045203e8ecec9c540a4d1509258965c5f03c9fe6e646a2518342a1441078f8be4f32594722a1686cf0482586d0d53922ea22005559862fef50e53532994d33c22811219bed93433f7d4b5d320580aeb7d702225a9e9696348e03a619231a3571ca57686b5b04c4711c855b0988c7744cd3c07186686dba40846300084d54d5db54594fa663db141025227cfac96eb112635b82e7456b372dab790244e5696c8863c4da69697249247228060128d96d388e065a1bb97c85d5ab1cb4ea37938c040bb40c12d94aa6e3fd1a88eaeffb5e8e9fc8924e1600b87ec3a7b1fe0eb6fbc258808a609a0b6a895a169618be55c71baf9b10fe09d5ee0917e363fe38af58b3ea3c172f2946ed560016d40fb2b4fde4787321b20e656ca363d3874a7df1f96e715c85e74569683009438ddcedeba4921a7f8fc4697b268dd2a2e8da2d002afe62005289df797ee520c8b5494f7ae1ca0ee2710b91bb24e3a7191a594baaee26cfb69de47e694666ac05bd3d5fcbd9b33f530d46889b8b09c256aad508c5a24b3a15e05674a04a3a395cab10c0732b0631f40043f751ff167538f752cdc0f72d00da5ba79a0394dd25933fc3febe0372e6742f813f841f2ec3f74d0c0374edf2583bb0c78c975fba2f954e44f38944264066531008770af5d3ef8403470e8a6367714a59aedd7c11804231453a394ad91ea9c54d05d1504a50546605291643fceac2079f05d96c9f9cfeb58be191111ad2c30f4c381946031422e5696345845c2e24166f9ffd301ad7e1ee2fe5b7b3bfb062c9a9dab50b97574e637eaf14a021e200133e958a5028849889e5730718577fef3e2997baa9944f01e13c561a88d880502854a954c0aa5b3d7f80710d1c3928e56237ae7d6cc652cf0492cf8fe2fb4253cb7b0f0f30aeecc06171eca338a57ec2eac8ec0b807cdec5f74396aefaecd1016a20d901f19c33944b3d04de5fb302048162cdda7d8f0fe05ef51dde2be5e2213cf71cd3bd27f9bc8b115dc4477bcea839cf84f3d15b5b7729d8c591fe1fc429f5e3d847412a936292e99781790ca50fa3cd5bb62bd8cec04097b8a52ce5522f128e1d7aa9860e600e43e9e354363b2015e724b9e11e76ec3ca6fe7380e9f4c47f4cfe01853d0b507521de260000000049454e44ae426082</data>
+    </image>
+    <image name="image1">
+        <data format="PNG" length="230">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b000000ad49444154789cb594510ec3200c436db45371b7699a76375f8b7d8caa11cd18d1827f225af1621908256187ca16ea4ef02dbaa1d6daec5a12c7ff9218021f9bbc4692689b32ebf02c541253321ee3017ac6bf728b420180005a6b00d08e25c835eecc403fbc130ab077e2e57ba47931c68375aee2395eab73b91947b3f6e4666ca1af670c787f7caa9bf1bf50f34072a117c7595003ce859e56bbb2a08019f4995060f5b67fd16c56a4cde3516f027970cdf09ae9310000000049454e44ae426082</data>
+    </image>
+    <image name="image2">
+        <data format="PNG" length="230">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b000000ad49444154789cd595c10a85201045af0f172e5af83d0afd5944f4670f9aef69e1a25d2d62c2b230c302cf460c3b5ca7310511e10d24001863e69c52221292277db78e4d0b0cff2149646bbbbd636b0b00f8650a1920e34bce514e63aac66dce49996862e53494d3c1735f0aaca5e472de123f255a8a63b2bbbc96b83c7150e3be0b5b2786df0d97e2ab85a97cdb6e4d9b2e3aeef2f191f67f5467dfa4bc762b4f2cf8cecb753d1191d88973b300c3df2bacefca13a90000000049454e44ae426082</data>
+    </image>
+    <image name="image3">
+        <data format="PNG" length="273">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b000000d849444154789ced94b10dc2301045bf238a740cc206a6426ce07510a24ac52e5900b9e436609074e94c611d77760224582990f23b2b77cfdff71d1b22c212aa16a1ae60adcd9c626bef01e80138002d801a408f47e3d01d3aa36b2b69da86f7401fe2770d75e0f5eed40efa0d5f376b7d001c8864e7582cce888e89abfc24dab9023324c2f3f5f731c57ade5c85c7cedac4e91468da1fa5c0323371ba9f08d5fd033007923b9f2aee1f759ca63d0fcefda38eeb9f9c7326d746666c4a5e377ff3e17cd19948d045bfb44087b7a7c8f127fddfebb6825f7a024d396af80d47d4ad0000000049454e44ae426082</data>
+    </image>
+    <image name="image4">
+        <data format="PNG" length="280">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b000000df49444154789ced94bd0dc23010859f11453a16600336b8361b5cc1360821b6a1f00291dbdb8041dca5338549b87312b090d2e5359163dfa777cf3f4e44b08676ab5037b0d6befc11ba902e5706e00134007a00792cd2ba5ab0714ca4a16ca000832824a2435a821185716e741cba90acb308a085fe1271023c889a04f4a6830ce5f77ae57870faad5d91e8f27c3f7660a17e2e8a21d3dfcaf0bcde423ff50a3c645a27eddceec9ac63ae064f9ddafac2b1478d2cb43c3d05f87ed399fde3d466ecf4eba68b9e0f463cc6ea0b51ca5c10bddba7735d2c4b72db7bbc81277a01bd0d6b27c600cfe20000000049454e44ae426082</data>
+    </image>
+    <image name="image5">
+        <data format="PNG" length="1043">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000003da49444154789ced974b6c1b4518c7ffb3b3deb5d39034114e402d201151f19240044822278e9d443cca0109812a71241c912a712e074e1c7a8053c58103077a448094d0464dec4d689b46a245501008542945049547a071edf53e66e6e380bace64fdbe8403238de4f9cf7f667edf37b3b36b4644d8cf62ecebeaff0500b313f3a5f327c9327fe86801a25e48ea87908711c811e472b3ac6b00837318fc2012e6af3079a92310e032a4bc03eb17366922331f41b06e0ea1e3146878e02c4cb31c698a4c78fe210879004426387791b27f0637026d2c11c3f64e161399630ce83003b5c2c0ad34983118299e9bc663a3f35a7a575797293df83d2cabb26b24d0d7f747d4ee0ac0b60398d6614d73bdc1986f7a7a8ead5f54343cbcade9495efbdd15404f6a1ba46e466d29397cffaebade20e420f577c3b93a06709c02dd3d740d2445a4b99543c8e5f2ac9e3f619641f2374d13d2ee1ec0b66ec0a02d90ac69aef748437fcaba1603f0aaf7770f904c7c0ba56e446d297b1184e9badeb5b5054a1f5c875261a41101e5ea5c77008eb34c43fd1741d28fb4aa77a46efa1de71c0df69e0653bf60f783eefa63989c7a39f27704609bdf80a9ebda84d5e0c1986f6df5331a489d4282fda86d55208ea0543daa793b0248b04b1042456da9d298ccbe1645b3b6fa31d9fc0bf4db4b30e042d4ce297cf134cae1ebc8e59ed1b2d5f64de8384bd467be01c66a379ba4fb20d40360ac04ceb660600b6ccf6648ba079e7c0993d36fd67d4adace00c75790cadfa36e826313a07f0fd7ed6c2b1a804006924691cdcdd75db86300a63620542d5b846108f622185c98f491e62598c8cc9c6abaf0edd2d6f780533c43527c8d5020aa016590cdbfc5a6f2efb0408e687d42fc0ea7f0415b7bdb1600c9cb902280101455626351bf6259ad4f08821217da99ba3d0011ac43084455aa7b919f79b596623e0e212ccd23fc0d148b2b2db3d012a05858a4d0bbaa45073ea179f2f9a38c8c513d0be10e5478b565702d01427f0342086d726e8dc77cdc8a6f835f6dbd0d2d01bc8a9e7e622398997d2576c279e25128ba53f37aee972816ce36dd86a6002b2b9f9057fd0e42525413c978f40090cfe799999cd2bc4278a8568a4d036c0ae0958b00f400ecd4930dfda903d99856297d8a4261b161161a022c9f3b4deead055d64160c5effd50b00b373c758c27e48d34895b0f3e7bb281416ea4268ef82a5cf4f9252371106d7e1b9e701da7bf50256f20958a9c7c1f9109e7dfe78ec2c9c597c9b6efdf57e7c21d603bb670c96fd309e7be144fdd7f1cef67b00546cf0ee12785710785760a59e02703cd69f4c8da3cc3e0491a7e9442ebc4a1161f013801335b0ffff9cee37c03f85b901363b127ab80000000049454e44ae426082</data>
+    </image>
+    <image name="image6">
+        <data format="PNG" length="882">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af40000033949444154789ced973f8fdc4418c67f63ef7abdff7775c9090585a40825a050a4425474a1a240820f104af82a28e928a00124d28040480829054a2e524051380127242041e89404c2ed6ed66b8fed9979290e3667ecbbec71ff1a4672e167de799fdfbc9e19db6a656585a36cde91ba1f0a80bd2e626ec876ddb583f456f69a0c5aef61dc12d3fcdce102d87c5d96fa5751ea14be6b425e1d7720005916c9f1c1d7d46a2700f07c2039448061ff3641380486732dcfa752af77d5810304f50de974bb40b7a07baa7abdef2b80c848fabd5f1157eef3fd1ed03e38803c9bcaf2b15be052aaf69c52cb95fabe00a4a996a5fe357ceee30cccf4193acd9f0a311ea7b10705d0695e27a87d8b731025cfa3b313b41a570b314a3da0aa047b0610bb2aedf033c40a9939c5347e014f4d107bbf08c0a872fc9e00f26c5d96da17c1cd30aec7387e8d46a3a9b2548bd87b85588fdff617204da7d26f5cc2d929567c1e666f500f961540d018aa3c77a2b6ec7ae762289d027b0008bd0fc0ddc638d0f615fcfad942fadc0cf1d4a3b28b8b2addfe138049af48e85dc15830729654ced3f8778c0df0d4a355e7645c996bd70099fe59eaf22ec609c2713275814618968a6b6c1f8fbbf37b21a97a02bb0348f55854fe36867433a97a0abc2f48e3f20653f6cf82a13022d82b80cbde017b778bf2cddfd7624debb184e1a050888501e2871f8b4d6f00a0fc67f16a677686356b885d2b687599018382b610401cad4a3afb1010947f92b0f51661587eb56e6dd1f8b298f48782e6bb11f0e4ee0092e4778927171167403569f7de7cac398030c098e2d2089c2ec5ed08a07522d1c6254cb6014067788156fbf463cd01506d8c294ad6948fe31d01a2f1fbe8e43b005addf374072f2e660e4013638b1530a67c166cfb593e7af08924d1e700d483a769f75f5fdc1b10c94a9ac9ef94b45205b48e6436b94c3cfd74aeb5ba2f1386cd8567aff54c92e8cb929e253789e37bd26a3d31cfa5fef9358b67eb329b7c44aa571137298e540d82f0199aed97e80dce6d0b329ddc121d7f45a6bfc7d93f2a6394d721089fa3d37f9556fba49a5720cf7e214bd750aa8ef28f95069aec0eae3929e98519ea9b647a73cd781539e65ee98f886c7e1fa9ff7f4e8f1ae02fd9ad6b3745b3a1040000000049454e44ae426082</data>
+    </image>
+    <image name="image7">
+        <data format="PNG" length="696">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af40000027f49444154789cc5575b6b134114fe2677bb51c13417bc3484444a2fa9085a147d97a50f55f0711ff6c99f250b2e54b0a5b552f64d9f0c361105250d82440a6d893125a6b9d44db23b3e65d3d0a43bbb1bc881f330bbdf9cf9ceec3767ce924c2683499a6ba2ab03f0589d204b3c35c308a242c64ea0b7f0ca130e89b877242e5f50214b3c6525415834204b3cbd77d78f07f72f19cf0e0e3bd8da6902009eaf06118bf673699dea78f9ea8469274c35204b3c5d9ce7f070390c4282202488afdf28b6769a10448508a242d6df36b0fb5933de735357f042bccef4b99844984edf06f1c40dfff8a936909d202a24f7a58e83d2550313e01278b6ba604a82894028340b973b6e787a313534f0e1110670b1d89c696c2602de4002c43363f8ad99f9731841544836971fc005b894696ca653d0d122f0fbfb02e42e9f8ec4ba3c7196907d3c0ba8f8731754af1a5eadee9fc3c8124f97ee2c0fe06a7f7f99c636dd014154882cf1b4f2a788e9e9102a956364b3b9a147ece68d6ba0da6f635c2e159d13384be2ec78182e16f51a04ba5d0ddbdbef4c6b017325bc28902cf1f4f1a324825c1dba5e0700ec158e98e25abe0b46d9d282c7c8be546ae1fd877da64ae898802cf1f4e94a102e944135a072dcc59bcd3af385e488802cf1746ed68770d80db5ada3d1d0f17a837d71c704002099f0425529348d626ddddae26321c04db9a0aa14dff3aaadf9b609f4ae6855a5a89d68d8fbd1b69c3de0b025f3f9095aff74942b9aed188e081000cda68e7cc15ef680430d743aa6fd86a931b564a3ac579eed666f9bc0b066c42e09cb1a90259e46236ea4925ec3a3113753ff37cc6c69c0e703da6d3a30b66b13ff33b245a0d5a2178eadd8c445e8e8188ec326ae81ff36b412ff10602cec0000000049454e44ae426082</data>
+    </image>
+    <image name="image8">
+        <data format="PNG" length="1018">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af4000003c149444154789cc5974b6c1b551486bf79d8633b8ed3a4692522b51104687848446a1b829486c44dd2f21082050f091620d8a38ab266c50289051b2456a5201620846809225268fc0834252c5290884a794810504583851dc7893d9e997b5850dc4c8d133bc8c991461add73cefdbf7bee63ee6822c24e9abea3ea80f97f92bf9c79572c739e80f133a6be88a12f577c4a4529ab5bb19d83d8ee21ee1f7e404ba5ce4947e4550cfd0a771dbaac01688d4e412a959090394f8b354dc0f8adae1c25418ae5fb308d252cf312b67b807bfa3fd2a0c10a9cffe27de98c4d1130aff2cfec7523a2613b3d94cab7e1b837e1a9289a6e133096085b0b84023f6068100dfc72ad976ecae5fe4a9f7501a45249698d5c624ffb029a1602ba0128da5d2c17fa3832f4b0562b77eec269696ffd1a6d5d44d9b9bdf2bee914a45209d9ddfe23e150b6d226a291cb7773b8ffa99ac2ebed9b8ba7241a5902c0f34c0edc79b292b76105d2e984ecdd9325148a01b16be290c9b4333070bc2e7180c2ea3e62b13000453becf3d5dc86a954423a772f6205af222a8ba82ccacb92c9b434240e303838a6b94e1e51598a45bfaf6605da6397b1cc3f10ef7a5bbeb09f7b071e6948fc5f73caab6881654a76cfe6007317de918ed8b73e71c7dd45be70f356b401102f8723364343c77c03a80248a72765efae49942a5d4f16c8ae1c617838bea5d1036457fa108255ed55bb607eee8444acaf7c6d25a797bec36f6f597c23f35560267d463a5b2610cff305158a2f3443bb1ac03212789ee30b70d42d0c0e3ddf94d15701989cc775fd01256fa859da7e8099d46909eb7fa2d639450ccad2ff1f694d00d0e47b5cd7bf20153d0cc71f6a5af97d00cafb1547f99da2f73653db0fe0b91950fe0a68c1fddb08e0e13bf900cc60ebf602a81bd68021aa2aa15e4b4c7f204ef12c81f063c48f3e5e731d550084ceaa4568388b5b129ffefc94ac2dbf8ea802a635be616c0540377b71ddb4cf29abb30d8b4f4dbe2685dc5b201ed18e17393af6ec86bba8721f0884faf15408d793ca63977e62f2d357eabab526135332f1f17392cbbc81e769b4749c64fcf84b9b6e61dfc7e8b38997a5907bef86108396b62788b43ec8c8c8685587c9e43929adcdb2bafc21cacb60985db4759e6074ec99bace0f1f40329990fc5f6f62af55975ed3db0886eec634bbd0f4284ae5f09cdf2997be43a4081884a3c788b63dc9487cbceec3abea739c4c26642d7f86d595b320e53aba3009450688c41e6574ece9864fcd9ab7e2c4f427525a9ba56c2fe03957907530ba1ec30cee2360dd81153e483c5efb5abe6580edb21dff39dd7180bf01dbfa93f5585633630000000049454e44ae426082</data>
+    </image>
+    <image name="image9">
+        <data format="PNG" length="187">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b0000008249444154789ced95310ac0200c4593d2c334d0c535e0d2c3e75ae9d442353521e0e60741233ee5f355141198a1bd2d30b346168a088ee637aba8aabf0d00804e720f60823d95525c7867454474d0db6766b56c4981af7a7dc6163c05e6ca7dad81a7c088c340e4c04f32bccd52a98868811778810732af74e42df084b3febc6956dc1a2d33a30ed7998d0000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>fileOpenAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>fileOpen()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>fileSave()</slot>
+    </connection>
+    <connection>
+        <sender>fileSaveAsAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>fileSaveAs()</slot>
+    </connection>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>fileExit()</slot>
+    </connection>
+    <connection>
+        <sender>editUndoAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>editUndo()</slot>
+    </connection>
+    <connection>
+        <sender>editRedoAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>editRedo()</slot>
+    </connection>
+    <connection>
+        <sender>helpAboutAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>helpAbout()</slot>
+    </connection>
+    <connection>
+        <sender>helpWhatsThisAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>whatsThis()</slot>
+    </connection>
+    <connection>
+        <sender>m_sortingComboBox</sender>
+        <signal>highlighted(int)</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>setSorting(int)</slot>
+    </connection>
+    <connection>
+        <sender>m_scoringComboBox</sender>
+        <signal>highlighted(int)</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>setScoring(int)</slot>
+    </connection>
+    <connection>
+        <sender>m_tableDisplay</sender>
+        <signal>selectionChanged()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>tableSelectionChanged()</slot>
+    </connection>
+    <connection>
+        <sender>m_remarksTextEdit</sender>
+        <signal>textChanged()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>remarksChanged()</slot>
+    </connection>
+    <connection>
+        <sender>m_allomorphyLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>allomorphyChanged(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>m_sortingComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>sort()</slot>
+    </connection>
+    <connection>
+        <sender>editDeleteAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>editDelete()</slot>
+    </connection>
+    <connection>
+        <sender>editBackspaceAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>editDelete()</slot>
+    </connection>
+    <connection>
+        <sender>newAffixAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>newAffix()</slot>
+    </connection>
+    <connection>
+        <sender>newStemRootAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>newRoot()</slot>
+    </connection>
+    <connection>
+        <sender>fileOpen_XmlAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>fileOpenFromXml()</slot>
+    </connection>
+    <connection>
+        <sender>editChangeFontAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>editChangeFont()</slot>
+    </connection>
+    <connection>
+        <sender>editRefreshAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>editRefresh()</slot>
+    </connection>
+    <connection>
+        <sender>m_updateTableButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>editRefresh()</slot>
+    </connection>
+    <connection>
+        <sender>m_tableDisplay</sender>
+        <signal>selectionChanged()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>enableMorphemeInfo()</slot>
+    </connection>
+    <connection>
+        <sender>clearCutsAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>clearCuts()</slot>
+    </connection>
+    <connection>
+        <sender>m_showFilteredPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>showFiltered()</slot>
+    </connection>
+    <connection>
+        <sender>m_analyzedComboBox</sender>
+        <signal>highlighted(int)</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>setWordFilter(int)</slot>
+    </connection>
+    <connection>
+        <sender>m_includeLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>showFiltered()</slot>
+    </connection>
+    <connection>
+        <sender>m_excludeLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>showFiltered()</slot>
+    </connection>
+    <connection>
+        <sender>fileNewAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>fileNew()</slot>
+    </connection>
+    <connection>
+        <sender>commitInfoAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>commitInfo()</slot>
+    </connection>
+    <connection>
+        <sender>m_commitInfoButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>commitInfo()</slot>
+    </connection>
+    <connection>
+        <sender>m_scoringComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>commitInfo()</slot>
+    </connection>
+    <connection>
+        <sender>m_allomorphyLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>commitInfo()</slot>
+    </connection>
+    <connection>
+        <sender>m_remarksTextEdit</sender>
+        <signal>textChanged()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>enableInfoCommit()</slot>
+    </connection>
+    <connection>
+        <sender>fileCloseAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>fileClose()</slot>
+    </connection>
+    <connection>
+        <sender>m_allomorphyLineEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>enableInfoCommit()</slot>
+    </connection>
+    <connection>
+        <sender>editDocInfoAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>editDocInfo()</slot>
+    </connection>
+    <connection>
+        <sender>duplicateWordAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>duplicateWord()</slot>
+    </connection>
+    <connection>
+        <sender>m_tableDisplay</sender>
+        <signal>contextMenuRequested(int,int,const QPoint&amp;)</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>tableContextMenu()</slot>
+    </connection>
+    <connection>
+        <sender>filterSelectedAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>filterSelected()</slot>
+    </connection>
+    <connection>
+        <sender>m_leftToRight</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>editSetDirectionality()</slot>
+    </connection>
+    <connection>
+        <sender>m_nextPageButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>nextPage()</slot>
+    </connection>
+    <connection>
+        <sender>m_previousPageButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>prevPage()</slot>
+    </connection>
+    <connection>
+        <sender>m_pageComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>pageSelected(int)</slot>
+    </connection>
+    <connection>
+        <sender>filePreferencesAction</sender>
+        <signal>activated()</signal>
+        <receiver>AlchemistBase</receiver>
+        <slot>filePreferences()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>m_tableDisplay</tabstop>
+    <tabstop>m_scoringComboBox</tabstop>
+    <tabstop>m_allomorphyLineEdit</tabstop>
+    <tabstop>m_remarksTextEdit</tabstop>
+    <tabstop>m_commitInfoButton</tabstop>
+    <tabstop>m_updateTableButton</tabstop>
+    <tabstop>m_sortingComboBox</tabstop>
+    <tabstop>m_analyzedComboBox</tabstop>
+    <tabstop>m_includeLineEdit</tabstop>
+    <tabstop>m_excludeLineEdit</tabstop>
+    <tabstop>m_showFilteredPushButton</tabstop>
+</tabstops>
+<slots>
+    <slot>fileNew()</slot>
+    <slot>fileOpen()</slot>
+    <slot>fileSave()</slot>
+    <slot>fileSaveAs()</slot>
+    <slot>filePrint()</slot>
+    <slot>fileExit()</slot>
+    <slot>editUndo()</slot>
+    <slot>editRedo()</slot>
+    <slot>editCut()</slot>
+    <slot>setScoring( int )</slot>
+    <slot>editPaste()</slot>
+    <slot>helpIndex()</slot>
+    <slot>helpContents()</slot>
+    <slot>helpAbout()</slot>
+    <slot>setSorting( int )</slot>
+    <slot>showFiltered()</slot>
+    <slot>showAll()</slot>
+    <slot>tableSelectionChanged()</slot>
+    <slot>remarksChanged()</slot>
+    <slot>allomorphyChanged( const QString &amp; )</slot>
+    <slot>sort()</slot>
+    <slot>editDelete()</slot>
+    <slot>newAffix()</slot>
+    <slot>newRoot()</slot>
+    <slot>fileOpenFromXml()</slot>
+    <slot>editChangeFont()</slot>
+    <slot>editRefresh()</slot>
+    <slot>enableMorphemeInfo()</slot>
+    <slot>clearCuts()</slot>
+    <slot>commitInfo()</slot>
+    <slot>enableInfoCommit()</slot>
+    <slot>setWordFilter( int )</slot>
+    <slot>fileClose()</slot>
+    <slot>editDocInfo()</slot>
+    <slot>duplicateWord()</slot>
+    <slot>tableContextMenu( int, int, QPoint &amp; )</slot>
+    <slot>tableContextMenu()</slot>
+    <slot>filterSelected()</slot>
+    <slot>editSetDirectionality()</slot>
+    <slot>nextPage()</slot>
+    <slot>prevPage()</slot>
+    <slot>pageSelected(int)</slot>
+    <slot>filePreferences()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

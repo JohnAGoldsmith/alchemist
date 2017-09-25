@@ -1,0 +1,292 @@
+<!DOCTYPE UI><UI version="3.2.1" stdsetdef="1">
+<class>DocInfoDialogBase</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>DocInfoDialogBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>511</width>
+            <height>284</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Alchemist : Document Information</string>
+    </property>
+    <property name="icon">
+        <pixmap>image0</pixmap>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>false</bool>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout11</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Creator Name(s):</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer11</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>40</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>m_creators</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>350</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout12</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel2</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Affiliation:</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer12</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>40</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>m_affiliation</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>350</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout13</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel3</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Language:</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer13</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>40</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>m_language</cstring>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>350</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout14</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel4</cstring>
+                    </property>
+                    <property name="text">
+                        <string>General Remarks:</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer14</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>40</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+            </hbox>
+        </widget>
+        <widget class="QTextEdit">
+            <property name="name">
+                <cstring>m_remarks</cstring>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>Layout1</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <spacer>
+                    <property name="name">
+                        <cstring>Horizontal Spacing2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonOk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;OK</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                    <property name="default">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonCancel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Cancel</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<images>
+    <image name="image0">
+        <data format="PNG" length="1188">89504e470d0a1a0a0000000d4948445200000020000000200806000000737a7af40000046b49444154789ced97cd6f147518c73fbfd999dd9dd9ee6e5b4a5b4b9177114d0c1aa341036c018312bd78c003078344c23fa0376f4df4e8416f120d0921ea8944dad2966e78318201e462941749792bb6b00bdbddd9999d999dc743ed96d296b640c403dfe3ccf37bbe9f799e99dfef1925223c49694fd4fd29c05380ff03803ed7c013c77f941b37aef1ece206d6bdb9533d2e0035db3ed0d3f59d384e11db31b0ed104585649d86957048d7bf4a26b3e591606604e83ab45f1cc7c671c1b63d0c43231a8d030110c1b66d6286cb82c6dba4ea37b031f3ee43814c0138b0ff2b1171713d0bdf0f300c9d6814e27113d7f501453c9e6074f42ea99409b8e8e44825afa2c737b361e307f3029904d0d9d929cd0b43ac4413b6ed60db3eb1580cd38c0110f8050cc3c00f742c2b81e785a45221a669525f77154bdf8b1fbe4225dccafa8d7be6045203e8ecec9c540a4d1509258965c5f03c9fe6e646a2518342a1441078f8be4f32594722a1686cf0482586d0d53922ea22005559862fef50e53532994d33c22811219bed93433f7d4b5d320580aeb7d702225a9e9696348e03a619231a3571ca57686b5b04c4711c855b0988c7744cd3c07186686dba40846300084d54d5db54594fa663db141025227cfac96eb112635b82e7456b372dab790244e5696c8863c4da69697249247228060128d96d388e065a1bb97c85d5ab1cb4ea37938c040bb40c12d94aa6e3fd1a88eaeffb5e8e9fc8924e1600b87ec3a7b1fe0eb6fbc258808a609a0b6a895a169618be55c71baf9b10fe09d5ee0917e363fe38af58b3ea3c172f2946ed560016d40fb2b4fde4787321b20e656ca363d3874a7df1f96e715c85e74569683009438ddcedeba4921a7f8fc4697b268dd2a2e8da2d002afe62005289df797ee520c8b5494f7ae1ca0ee2710b91bb24e3a7191a594baaee26cfb69de47e694666ac05bd3d5fcbd9b33f530d46889b8b09c256aad508c5a24b3a15e05674a04a3a395cab10c0732b0631f40043f751ff167538f752cdc0f72d00da5ba79a0394dd25933fc3febe0372e6742f813f841f2ec3f74d0c0374edf2583bb0c78c975fba2f954e44f38944264066531008770af5d3ef8403470e8a6367714a59aedd7c11804231453a394ad91ea9c54d05d1504a50546605291643fceac2079f05d96c9f9cfeb58be191111ad2c30f4c381946031422e5696345845c2e24166f9ffd301ad7e1ee2fe5b7b3bfb062c9a9dab50b97574e637eaf14a021e200133e958a5028849889e5730718577fef3e2997baa9944f01e13c561a88d880502854a954c0aa5b3d7f80710d1c3928e56237ae7d6cc652cf0492cf8fe2fb4253cb7b0f0f30aeecc06171eca338a57ec2eac8ec0b807cdec5f74396aefaecd1016a20d901f19c33944b3d04de5fb302048162cdda7d8f0fe05ef51dde2be5e2213cf71cd3bd27f9bc8b115dc4477bcea839cf84f3d15b5b7729d8c591fe1fc429f5e3d847412a936292e99781790ca50fa3cd5bb62bd8cec04097b8a52ce5522f128e1d7aa9860e600e43e9e354363b2015e724b9e11e76ec3ca6fe7380e9f4c47f4cfe01853d0b507521de260000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>DocInfoDialogBase</receiver>
+        <slot>accept()</slot>
+    </connection>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>DocInfoDialogBase</receiver>
+        <slot>reject()</slot>
+    </connection>
+</connections>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
